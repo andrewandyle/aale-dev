@@ -4,8 +4,11 @@ import { Link } from "gatsby"
 const Navigation = () => (
   <div
     style={{
-      background: '#f4f4f4',
-      paddingTop: '10px',
+      border: `1px solid rgba(255,255,255,0.4)`,
+      backgroundColor: `rgba(255,255,255,0.25)`,
+      borderRadius: `30px`,
+      backdropFilter: `blur(5px)`,
+      marginBottom: `80px`
     }}
   >
     <ul

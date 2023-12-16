@@ -1,35 +1,38 @@
 import styled from 'styled-components'
-import { fadeInFromTop, fadeInFromLeft, fadeInFromRight } from './keyframes'
-
-export const MainHeader = styled.div`
-  position: relative;
-  margin-top: 80px;
-
-  @media only screen and (max-width: 768px) {
-    overflow: hidden;
-    margin-top: 50px;
-  }
-`
+import { fadeIn, fadeInFromTop, fadeInFromLeft, fadeInFromRight } from './keyframes'
 
 export const LogoContainer = styled.div`
+  animation: ${fadeIn};
+  animation-duration: 800ms;
+
+  @media only screen and (min-width: 900px) {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+
+    width: 750px;
+    margin-bottom: 30px;
+    padding: 50px;
+  }
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 30px;
-
+  
   #avatar {
     animation: ${fadeInFromLeft};
     animation-duration: 800ms;
-    width: 500px;
+    width: 375px;
   }
 
   #logo {
     position: absolute;
-    right: 0;
+    right: 30px;
     animation: ${fadeInFromRight};
     animation-duration: 800ms;
-    width: 600px;
+    width: 500px;
 
     @media only screen and (max-width: 900px) {
       position: relative;
@@ -42,13 +45,18 @@ export const LogoContainer = styled.div`
 `
 
 export const ButtonContainer = styled.div`
+  border: 1px solid rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+
   display: flex;
   justify-content: center;
   animation: ${fadeInFromTop};
   animation-duration: 1000ms;
-
+  
   & img {
-    margin-left: 20px;
+    margin: 10px 15px;
     transition: 600ms ease;
 
     &:hover {
