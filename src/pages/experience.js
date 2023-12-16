@@ -1,10 +1,11 @@
 import * as React from "react"
+import Layout from "../components/layout"
 
 const ExperiencePage = () => {
   return (
-    <div>
+    <Layout>
       <h1>Experience Page</h1>
-    </div>
+    </Layout>
   )
 }
 
