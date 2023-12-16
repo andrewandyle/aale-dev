@@ -1,4 +1,5 @@
 import * as React from "react"
+import Navigation from "../components/navigation"
 
 const pageStyles = {
   color: "#232129",
@@ -126,6 +127,7 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
+      <Navigation />
       <h1 style={headingStyles}>
         Congratulations
         <br />
@@ -173,4 +175,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Home | Andrew Le's Website</title>
