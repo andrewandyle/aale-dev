@@ -4,15 +4,7 @@ import Layout from "../components/layout"
 const AboutPage = () => {
   return (
     <Layout>
-      <div style={{
-        border: `1px solid rgba(255,255,255,0.4)`,
-        backgroundColor: `rgba(255,255,255,0.25)`,
-        borderRadius: `30px`,
-        height: `500px`,
-        backdropFilter: `blur(5px)`
-      }}>
-        About Me
-      </div>
+      <h1>About Me</h1>
     </Layout>
   )
 }

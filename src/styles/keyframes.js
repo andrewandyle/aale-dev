@@ -16,6 +16,17 @@ export const fadeInFromTop = keyframes`
   }
 `
 
+export const fadeInFromBottom = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+`
+
 export const fadeInFromLeft = keyframes`
   0% {
      opacity: 0;
