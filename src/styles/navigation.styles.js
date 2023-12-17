@@ -16,5 +16,7 @@ export const NavContainer = styled.div`
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    padding-inline-start: 0px;
+    font-weight: 500;
   }
 `

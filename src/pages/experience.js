@@ -42,7 +42,7 @@ const skills = [
 const ExperiencePage = () => {
   return (
     <Layout>
-      <h1>My Experience</h1>
+      <h1>Andrew's Work Experience</h1>
       <SkillsContainer>
         <p>
           Through my full-time work at Citi and in internships, projects, and other courses, I've expanded my tech stack and gained proficiency in the following:
@@ -69,11 +69,15 @@ const ExperiencePage = () => {
           >
             <SkillBubbles>
               <Skill>Angular</Skill>
-              <Skill>Akamai</Skill>
-              <Skill>NGINX</Skill>
             </SkillBubbles>
             <h3>Software Engineer</h3>
             <h4>Citi</h4>
+            <ul>
+              <li>Deliver updates to core libraries and features as part of Web Container team</li>
+              <li>Lead 200+ journey teams in app-wide migration to Angular 15</li>
+              <li>Design new branding experience for homepage and Citi Blue customers</li>
+              <li>Facilitate developer onboarding process and maintain documentation</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             date="August 2018 - December 2021"
@@ -81,6 +85,10 @@ const ExperiencePage = () => {
           >
             <h3>B.S. in Computer Science</h3>
             <h4>The University of Texas at Austin</h4>
+            <ul>
+              <li>Completed 45 hours of CS coursework, built multiple web and mobile apps in group projects</li>
+              <li><u>Coursework:</u> Data Structures, Algorithms, Software Engineering, iOS Mobile Computing, Modern Web Apps, Object-Oriented Programming, Network Security and Privacy, Computer Architecture, Operating Systems</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             date="June 2021 - August 2021"
@@ -89,10 +97,14 @@ const ExperiencePage = () => {
           >
             <SkillBubbles>
               <Skill>Angular</Skill>
-              <Skill>AWS</Skill>
             </SkillBubbles>
             <h3>Global Consumer Technology Analyst</h3>
             <h4>Citi</h4>
+            <ul>
+              <li>Contributed to Angular library providing reusable, generic, and ADA-compliant components to journey teams</li>
+              <li>Conducted research in spike stories and documented findings</li>
+              <li>Engineered QoL features and fixes in an interal feedback tool</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             date="April 2020 - May 2021"
@@ -107,6 +119,12 @@ const ExperiencePage = () => {
             </SkillBubbles>
             <h3>Full Stack Engineer</h3>
             <h4>ProMazo</h4>
+            <ul>
+              <li>Developed a data-driven PWA for career exploration using React</li>
+              <li>Released a React Native app to match students with career mentors</li>
+              <li>Architected user flow and authentication using GraphQL and AWS</li>
+              <li>Built a web extension to scrape data from career search websites</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             date="August 2020 - January 2021"
@@ -119,6 +137,10 @@ const ExperiencePage = () => {
             </SkillBubbles>
             <h3>Frontend Engineer</h3>
             <h4>Edge Learning</h4>
+            <ul>
+              <li>Built a college readiness tracker using React and Redux</li>
+              <li>Designed and implemented consistent UI/UX across all device sizes</li>
+            </ul>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </TimelineContainer>

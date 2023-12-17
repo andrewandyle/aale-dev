@@ -64,6 +64,10 @@ export const TimelineContainer = styled.div`
       font-size: 0.8rem;
       font-weight: normal;
     }
+
+    & ul {
+      padding-inline-start: 20px;
+    }
   }
 
   .vertical-timeline-element-date {

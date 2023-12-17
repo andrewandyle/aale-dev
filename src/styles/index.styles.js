@@ -24,7 +24,11 @@ export const LogoContainer = styled.div`
   #avatar {
     animation: ${fadeInFromLeft};
     animation-duration: 800ms;
-    width: 375px;
+    max-width: 375px;
+
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+    }
   }
 
   #logo {
@@ -32,10 +36,12 @@ export const LogoContainer = styled.div`
     right: 30px;
     animation: ${fadeInFromRight};
     animation-duration: 800ms;
-    width: 500px;
+    max-width: 500px;
 
     @media only screen and (max-width: 900px) {
       position: relative;
+      right: 0;
+      width: 100%;
     }
   }
 
@@ -65,8 +71,7 @@ export const ButtonContainer = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+  @media only screen and (max-width: 900px) {
+    margin-top: 30px;
   }
 `
