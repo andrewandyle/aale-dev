@@ -1,19 +1,27 @@
 import styled from 'styled-components'
 import { fadeIn, fadeInFromTop, fadeInFromLeft, fadeInFromRight } from './keyframes'
 
-export const LogoContainer = styled.div`
+export const GlassContainer = styled.div`
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+`
+
+export const LogoContainer = styled(GlassContainer)`
   animation: ${fadeIn};
   animation-duration: 800ms;
 
   @media only screen and (min-width: 900px) {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.25);
-    border-radius: 30px;
-    backdrop-filter: blur(5px);
-
     width: 750px;
     margin-bottom: 30px;
     padding: 50px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    border: none;
+    background-color: transparent;
+    backdrop-filter: none;
   }
 
   position: relative;
@@ -50,12 +58,7 @@ export const LogoContainer = styled.div`
   }
 `
 
-export const ButtonContainer = styled.div`
-  border: 1px solid rgba(255,255,255,0.4);
-  background-color: rgba(255,255,255,0.25);
-  border-radius: 30px;
-  backdrop-filter: blur(5px);
-
+export const ButtonContainer = styled(GlassContainer)`
   display: flex;
   justify-content: center;
   animation: ${fadeInFromTop};

@@ -1,10 +1,7 @@
 import { styled } from 'styled-components'
+import { GlassContainer } from './index.styles'
 
-export const NavContainer = styled.div`
-  border: 1px solid rgba(255,255,255,0.4);
-  background-color: rgba(255,255,255,0.25);
-  border-radius: 30px;
-  backdrop-filter: blur(5px);
+export const NavContainer = styled(GlassContainer)`
   margin-bottom: 50px;
 
   a {

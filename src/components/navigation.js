@@ -11,8 +11,8 @@ const links = [
 const Navigation = () => (
   <NavContainer>
     <ul>
-      { links.map(link =>
-        <li><Link to={link.route}>{link.name}</Link></li>
+      {links.map(link =>
+        <li key={link.name}><Link to={link.route}>{link.name}</Link></li>
       )}
     </ul>
   </NavContainer>

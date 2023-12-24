@@ -1,14 +1,10 @@
 import styled from 'styled-components'
+import { GlassContainer } from './index.styles'
 import { fadeInFromTop, fadeInFromBottom } from './keyframes'
 
-export const SkillsContainer = styled.div`
+export const SkillsContainer = styled(GlassContainer)`
   animation: ${fadeInFromTop};
   animation-duration: 500ms;
-
-  border: 1px solid rgba(255,255,255,0.4);
-  background-color: rgba(255,255,255,0.25);
-  border-radius: 30px;
-  backdrop-filter: blur(5px);
 
   width: 100%;
   margin-top: 30px;
