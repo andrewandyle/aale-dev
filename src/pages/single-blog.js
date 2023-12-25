@@ -39,7 +39,7 @@ export default SingleBlogPage
 export const Head = ({ data }) => <title>{data.contentfulBlogPost.title} | Andrew Le's Website</title>
 
 export const pageQuery = graphql`
-  query BlogPostByPath($url: String!) {
+  query BlogPostByPath($url: String) {
     contentfulBlogPost(path: {eq: $url}) {
       id
       title
