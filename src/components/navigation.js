@@ -5,7 +5,8 @@ import { NavContainer } from "../styles/navigation.styles"
 const links = [
   { route: '/', name: 'Home' },
   { route: '/about', name: 'About' },
-  { route: '/experience', name: 'Experience' }
+  { route: '/experience', name: 'Experience' },
+  { route: '/blog', name: 'Blog' }
 ]
 
 const Navigation = () => (

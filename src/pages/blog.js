@@ -1,26 +1,26 @@
 import * as React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import { graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { BLOCKS } from "@contentful/rich-text-types"
-import { GlassContainer } from "../styles/index.styles"
+import { BlogList, BlogEntry } from "../styles/blog.styles"
 
 const BlogPage = ({ data }) => {
-  const richText = JSON.parse(data.contentfulBlogPost.content.raw);
-  const options = {
-    renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        const alt = node.data.target.fields.title['en-US'];
-        const url = node.data.target.fields.file['en-US'].url;
-        return <img alt={alt} src={url} />
-      }
-    }
-  }
   return (
     <Layout>
-      <GlassContainer>
-        {documentToReactComponents(richText, options)}
-      </GlassContainer>
+      <h1>Andrew Le's Blog</h1>
+      <BlogList>
+        {data.allContentfulBlogPost.edges.map((post) => (
+          <Link key={post.node.contentful_id} to={post.node.path}>
+            <BlogEntry key={post.node.contentful_id}>
+              <div>
+                <img src={post.node.icon.url} alt={post.node.icon.title} />
+                <h3>{post.node.title}</h3>
+              </div>
+              <p>{post.node.subtitle}</p>
+            </BlogEntry>
+          </Link>
+        ))}
+      </BlogList>
     </Layout>
   )
 }
@@ -30,14 +30,18 @@ export default BlogPage
 export const Head = () => <title>Blog | Andrew Le's Website</title>
 
 export const pageQuery = graphql`{
-  contentfulBlogPost(contentful_id: {eq: "6VPPb5jhQeprZcfuVfso6m"}) {
-    id
-    title
-    subtitle {
-      subtitle
-    }
-    content {
-      raw
+  allContentfulBlogPost {
+    edges {
+      node {
+        contentful_id
+        title
+        subtitle
+        icon {
+          title
+          url
+        }
+        path
+      }
     }
   }
 }`
