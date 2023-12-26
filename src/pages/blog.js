@@ -8,10 +8,13 @@ const BlogPage = ({ data }) => {
   return (
     <Layout>
       <h1>Andrew Le's Blog</h1>
+      <h4 style={{ alignSelf: 'normal', marginBlockStart: 0 }}>
+        My collection of pages to showcase my personal life! Made using the Contentful Headless CMS.
+      </h4>
       <BlogList>
-        {data.allContentfulBlogPost.edges.map((post) => (
+        {data.allContentfulBlogPost.edges.map((post, index) => (
           <Link key={post.node.contentful_id} to={post.node.path}>
-            <BlogEntry key={post.node.contentful_id}>
+            <BlogEntry key={post.node.contentful_id} index={index}>
               <div>
                 <img src={post.node.icon.url} alt={post.node.icon.title} />
                 <h3>{post.node.title}</h3>
@@ -30,7 +33,7 @@ export default BlogPage
 export const Head = () => <title>Blog | Andrew Le's Website</title>
 
 export const pageQuery = graphql`{
-  allContentfulBlogPost {
+  allContentfulBlogPost(sort: {createdAt: DESC}) {
     edges {
       node {
         contentful_id

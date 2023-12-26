@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 import { GlassContainer } from './index.styles'
-import { fadeIn } from './keyframes'
+import { fadeIn, fadeInFromTop } from './keyframes'
 
 export const BlogList = styled.div`
   display: flex;
@@ -12,9 +12,14 @@ export const BlogList = styled.div`
 `
 
 export const BlogEntry = styled(GlassContainer)`
-  max-width: 250px;
+  max-width: 260px;
   padding: 10px;
+  margin: 10px;
   color: white;
+
+  animation: ${fadeInFromTop};
+  transition: 300ms ease;
+  ${({ index }) => `animation-duration: ${(index + 1) * 300}ms;`}
 
   p {
     margin-block-end: 0.5em;
@@ -28,11 +33,30 @@ export const BlogEntry = styled(GlassContainer)`
       margin: 0;
       margin-left: 8px;
     }
+
+    img {
+      width: 30px;
+    }
   }
 
   &:hover {
     transform: translateY(-10px);
     transition: transform 300ms ease, filter 300ms ease;
+  }
+`
+
+export const BlogPostHeader = styled.div`
+  align-self: normal;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 30px;
+  }
+
+  h1 {
+    margin: 0;
+    margin-left: 10px;
   }
 `
 
@@ -43,8 +67,12 @@ export const BlogPostContainer = styled(GlassContainer)`
   animation: ${fadeIn};
   animation-duration: 400ms;
 
-  * {
+  p, h2, h3, table {
     padding: 0 30px;
+  }
+  
+  a {
+    color: white;
   }
 
   hr {
@@ -84,6 +112,22 @@ export const BlogPostContainer = styled(GlassContainer)`
   tr {
     :last-child {
       display: block;
+    }
+  }
+
+  ol {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+
+      img {
+        padding: 5px 0;
+      }
     }
   }
 `

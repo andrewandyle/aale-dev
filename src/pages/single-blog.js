@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
-import { BlogPostContainer } from "../styles/blog.styles"
+import { BlogPostHeader, BlogPostContainer } from "../styles/blog.styles"
 
 const SingleBlogPage = ({ data }) => {
   const imgList = data.contentfulBlogPost.content.references;
@@ -22,10 +22,10 @@ const SingleBlogPage = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ alignSelf: 'normal', display: 'flex', alignItems: 'center' }}>
+      <BlogPostHeader>
         <img src={data.contentfulBlogPost.icon.url} alt={data.contentfulBlogPost.icon.title} />
-        <h1 style={{ margin: 0, marginLeft: 10 }}>{data.contentfulBlogPost.title}</h1>
-      </div>
+        <h1>{data.contentfulBlogPost.title}</h1>
+      </BlogPostHeader>
       <h3 style={{ alignSelf: 'normal' }}>{data.contentfulBlogPost.subtitle}</h3>
       <BlogPostContainer>
         {documentToReactComponents(richText, options)}
