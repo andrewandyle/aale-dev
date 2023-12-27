@@ -115,6 +115,12 @@ export const BlogPostContainer = styled(GlassContainer)`
     }
   }
 
+  ul {
+    p {
+      padding: 0;
+    }
+  }
+
   ol {
     display: flex;
     list-style: none;

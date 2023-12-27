@@ -1,6 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { BlogPostHeader, BlogPostContainer } from "../styles/blog.styles"
@@ -22,6 +22,16 @@ const SingleBlogPage = ({ data }) => {
 
   return (
     <Layout>
+      <Link
+        to="/blog"
+        style={{
+          color: 'white',
+          alignSelf: 'normal',
+          marginBottom: 30,
+          fontSize: 18,
+          fontWeight: 700
+        }}
+      >&#8592; Back</Link>
       <BlogPostHeader>
         <img src={data.contentfulBlogPost.icon.url} alt={data.contentfulBlogPost.icon.title} />
         <h1>{data.contentfulBlogPost.title}</h1>
