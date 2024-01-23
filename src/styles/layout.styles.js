@@ -20,6 +20,7 @@ export const GlobalStyle = createGlobalStyle`
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ), url(${imageBg});
+    background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
     font-family: 'Ubuntu', sans-serif;

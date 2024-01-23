@@ -1,7 +1,6 @@
 import { styled } from 'styled-components'
-import { GlassContainer } from './index.styles'
 
-export const NavContainer = styled(GlassContainer)`
+export const NavContainer = styled.header`
   margin-bottom: 50px;
   
   position: fixed;
@@ -11,7 +10,7 @@ export const NavContainer = styled(GlassContainer)`
   z-index: 9999;
 
   border-radius: 0;
-  border: none;
+  background-color: rgba(255, 255, 255, 0.25);
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
 
@@ -20,11 +19,13 @@ export const NavContainer = styled(GlassContainer)`
     text-decoration: none;
   }
 
-  ul {
+  nav {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     padding-inline-start: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
     font-weight: 500;
 
     li {
@@ -52,6 +53,46 @@ export const NavContainer = styled(GlassContainer)`
   &:hover {
     &:before {
       left: 100%;
+    }
+  }
+
+  #mobile-menu-open,
+  #mobile-menu-close {
+    display: none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 15px;
+    background-color: #60487e;
+
+    #mobile-menu-open,
+    #mobile-menu-close {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    nav {
+      ${({ showMobileNav }) => `display: ${showMobileNav ? 'block' : 'none'};`}
+
+      position: fixed;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      margin-block-start: 0;
+
+      padding: .5rem 4%;
+      background-color: #291355;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 20px;
+
+      li {
+        margin: 1.5rem 0;
+        &:hover {
+          -webkit-transform: none;
+          transition: 0;
+        }
+      }
     }
   }
 `
