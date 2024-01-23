@@ -16,11 +16,13 @@ export const PageContainer = styled.div`
 
 export const GlobalStyle = createGlobalStyle`
   body {
+    background: #330a6a;
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.5), 
       rgba(0, 0, 0, 0.5)
     ), url(${imageBg});
     background-attachment: fixed;
+    background-repeat: no-repeat;
     color: white;
     font-family: 'Ubuntu', sans-serif;
   }

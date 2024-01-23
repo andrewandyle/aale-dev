@@ -72,7 +72,7 @@ export const NavContainer = styled.header`
     }
 
     nav {
-      position: fixed;
+      position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
