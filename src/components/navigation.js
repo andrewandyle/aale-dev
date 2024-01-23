@@ -12,13 +12,26 @@ const links = [
 
 const Navigation = () => {
   const [showMobileNav, setShowMobileNav] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 700)
+ 
+  const handleResize = () => {
+    if (window.innerWidth <= 700) {
+      setIsMobile(true)
+    } else {
+      setIsMobile(false)
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
 
   return (
-    <NavContainer showmobilenav={showMobileNav}>
+    <NavContainer>
       {showMobileNav
         ? <FaTimes id="mobile-menu-close" onClick={() => setShowMobileNav(false)} />
         : <FaBars id="mobile-menu-open" onClick={() => setShowMobileNav(true)} />}
-      <nav>
+      <nav style={{ display: !isMobile ? 'flex' : showMobileNav ? 'block' : 'none' }}>
         {links.map(link =>
           <li key={link.name}><Link to={link.route}>{link.name}</Link></li>
         )}

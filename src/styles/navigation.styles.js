@@ -21,7 +21,6 @@ export const NavContainer = styled.header`
 
   nav {
     list-style: none;
-    display: flex;
     justify-content: space-evenly;
     padding-inline-start: 0px;
     margin-block-start: 1em;
@@ -73,8 +72,6 @@ export const NavContainer = styled.header`
     }
 
     nav {
-      ${({ showmobilenav }) => `display: ${showmobilenav ? 'block' : 'none'};`}
-
       position: fixed;
       top: 100%;
       left: 0;
