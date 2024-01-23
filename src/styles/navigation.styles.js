@@ -60,7 +60,7 @@ export const NavContainer = styled.header`
     display: none;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 720px) {
     padding: 15px;
     background-color: #60487e;
 

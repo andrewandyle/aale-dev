@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { NavContainer } from "../styles/navigation.styles"
 import { FaBars, FaTimes } from "react-icons/fa"
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 const links = [
   { route: '/', name: 'Home' },
@@ -12,26 +13,14 @@ const links = [
 
 const Navigation = () => {
   const [showMobileNav, setShowMobileNav] = React.useState(false);
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 700)
- 
-  const handleResize = () => {
-    if (window.innerWidth <= 700) {
-      setIsMobile(true)
-    } else {
-      setIsMobile(false)
-    }
-  }
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
+  const breakpoints = useBreakpoint();
 
   return (
     <NavContainer>
       {showMobileNav
         ? <FaTimes id="mobile-menu-close" onClick={() => setShowMobileNav(false)} />
         : <FaBars id="mobile-menu-open" onClick={() => setShowMobileNav(true)} />}
-      <nav style={{ display: !isMobile ? 'flex' : showMobileNav ? 'block' : 'none' }}>
+      <nav style={{ display: !breakpoints.sm ? 'flex' : showMobileNav ? 'block' : 'none' }}>
         {links.map(link =>
           <li key={link.name}><Link to={link.route}>{link.name}</Link></li>
         )}
