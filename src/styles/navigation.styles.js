@@ -73,7 +73,7 @@ export const NavContainer = styled.header`
     }
 
     nav {
-      ${({ showMobileNav }) => `display: ${showMobileNav ? 'block' : 'none'};`}
+      ${({ showmobilenav }) => `display: ${showmobilenav ? 'block' : 'none'};`}
 
       position: fixed;
       top: 100%;

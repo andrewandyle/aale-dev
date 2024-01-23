@@ -14,7 +14,7 @@ const Navigation = () => {
   const [showMobileNav, setShowMobileNav] = React.useState(false);
 
   return (
-    <NavContainer showMobileNav={showMobileNav}>
+    <NavContainer showmobilenav={showMobileNav}>
       {showMobileNav
         ? <FaTimes id="mobile-menu-close" onClick={() => setShowMobileNav(false)} />
         : <FaBars id="mobile-menu-open" onClick={() => setShowMobileNav(true)} />}
