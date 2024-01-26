@@ -15,6 +15,16 @@ const SingleBlogPage = ({ data }) => {
         // const url = node.data.target.fields.file['en-US'].url;
         // return <img alt={alt} src={url} />
         const imgObj = imgList.find(img => img.contentful_id === node.data.target.sys.id)
+        if (imgObj.url.includes("videos")) {
+          return (
+            <center>
+              <video preload="metadata" controls>
+                <source src={`${imgObj.url}#t=0.001`} type="video/mp4" />
+                <track kind="captions" />
+              </video>
+            </center>
+          )
+        }
         return <img alt={imgObj.title} src={imgObj.url} />
       }
     }

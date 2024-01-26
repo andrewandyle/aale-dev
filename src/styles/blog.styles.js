@@ -86,6 +86,15 @@ export const BlogPostContainer = styled(GlassContainer)`
     max-width: 90%;
   }
 
+  video {
+    max-width: 480px;
+    max-height: 640px;
+
+    @media only screen and (max-width: 500px) {
+      max-width: 90%;
+    }
+  }
+
   th {
     padding: 0;
     text-decoration: underline;
