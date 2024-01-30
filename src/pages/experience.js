@@ -12,7 +12,7 @@ import Python from '../images/skills/python.svg'
 import CPP from '../images/skills/cpp.svg'
 import JavaScript from '../images/skills/javascript.svg'
 import Swift from '../images/skills/swift.svg'
-import Android from '../images/skills/android.svg'
+import Kotlin from '../images/skills/kotlin.svg'
 import ReactIcon from '../images/skills/react.svg'
 import Angular from '../images/skills/angular.svg'
 import GraphQL from '../images/skills/graphql.svg'
@@ -31,7 +31,7 @@ const skills = [
   { name: 'C++', src: CPP },
   { name: 'JavaScript', src: JavaScript },
   { name: 'Swift', src: Swift },
-  { name: 'Android', src: Android },
+  { name: 'Kotlin', src: Kotlin },
   { name: 'React', src: ReactIcon },
   { name: 'Angular', src: Angular },
   { name: 'GraphQL', src: GraphQL },
@@ -72,10 +72,10 @@ const ExperiencePage = () => (
           <h3>Software Engineer</h3>
           <h4>Citi</h4>
           <ul>
-            <li>Deliver updates to core libraries and features as part of Web Container team</li>
             <li>Lead 200+ journey teams in app-wide migration to Angular 15</li>
-            <li>Design new branding experience for homepage and Citi Blue customers</li>
-            <li>Facilitate developer onboarding process and maintain documentation</li>
+            <li>Design new customer-facing experiences for branding and login flow visible to 2 mil. customers daily</li>
+            <li>Maintain and refactor core Angular libraries to minimize defects and improve performance</li>
+            <li>Streamline developer onboarding process and minimize costs of onboarding effort</li>
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -101,7 +101,7 @@ const ExperiencePage = () => (
           <h4>Citi</h4>
           <ul>
             <li>Contributed to Angular library providing reusable, generic, and ADA-compliant components to journey teams</li>
-            <li>Conducted research in spike stories and documented findings</li>
+            <li>Conducted research in spike stories and documented findings/best practices</li>
             <li>Engineered QoL features and fixes in an interal feedback tool</li>
           </ul>
         </VerticalTimelineElement>
