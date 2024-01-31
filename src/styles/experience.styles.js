@@ -46,6 +46,10 @@ export const TimelineContainer = styled.div`
     backdrop-filter: blur(5px);
     box-shadow: none;
 
+    & a {
+      color: white;
+    }
+
     & h3 {
       margin-top: 10px;
       margin-bottom: 5px;

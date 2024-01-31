@@ -72,10 +72,10 @@ const ExperiencePage = () => (
           <h3>Software Engineer</h3>
           <h4>Citi</h4>
           <ul>
-            <li>Lead 200+ journey teams in app-wide migration to Angular 15</li>
-            <li>Design new customer-facing experiences for branding and login flow visible to 2 mil. customers daily</li>
+            <li>Lead <b>200+ journey teams</b> in app-wide migration to Angular 15</li>
+            <li>Design new customer-facing experiences for branding and login flow visible to <b>2 million customers daily</b></li>
             <li>Maintain and refactor core Angular libraries to minimize defects and improve performance</li>
-            <li>Streamline developer onboarding process and minimize costs of onboarding effort</li>
+            <li>Write documentation to streamline the developer onboarding process and minimize onboarding effort</li>
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -100,9 +100,9 @@ const ExperiencePage = () => (
           <h3>Global Consumer Technology Analyst</h3>
           <h4>Citi</h4>
           <ul>
-            <li>Contributed to Angular library providing reusable, generic, and ADA-compliant components to journey teams</li>
+            <li>Contributed to an Angular library providing reusable, generic, and ADA-compliant components to journey teams</li>
             <li>Conducted research in spike stories and documented findings/best practices</li>
-            <li>Engineered QoL features and fixes in an interal feedback tool</li>
+            <li>Engineered QoL features and fixes in an internal manager/employee feedback tool</li>
           </ul>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -119,8 +119,8 @@ const ExperiencePage = () => (
           <h3>Full Stack Engineer</h3>
           <h4>ProMazo</h4>
           <ul>
-            <li>Developed a data-driven PWA for career exploration using React</li>
-            <li>Released a React Native app to match students with career mentors</li>
+            <li>Developed <a href="https://mimino.promazo.com/" target="_blank" rel="noreferrer">MiMino</a>, a data-driven PWA for career exploration using React</li>
+            <li>Released the <a href="https://mentors.promazo.com/" target="_blank" rel="noreferrer">100k Mentor Challenge</a> mobile app to match students with career mentors</li>
             <li>Architected user flow and authentication using GraphQL and AWS</li>
             <li>Built a web extension to scrape data from career search websites</li>
           </ul>

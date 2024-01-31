@@ -58,7 +58,42 @@ export const LogoContainer = styled(GlassContainer)`
   }
 `
 
-export const ButtonContainer = styled(GlassContainer)`
+export const ButtonsContainer = styled.div`
+  display: flex;
+
+  @media only screen and (max-width: 900px) {
+    display: block;
+    margin-top: 30px;
+  }
+`
+
+export const ResumeButton = styled.a`
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+
+  padding: 20px;
+  margin-right: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+
+  animation: ${fadeInFromTop};
+  animation-duration: 1000ms;
+  
+  &:hover {
+    transform: translateY(-10px);
+    transition: transform 300ms ease, filter 300ms ease;
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin-right: 0;
+  }
+`
+
+export const SocialMedia = styled(GlassContainer)`
   display: flex;
   justify-content: center;
   animation: ${fadeInFromTop};

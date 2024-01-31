@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 
 // Styled Components
-import { LogoContainer, ButtonContainer } from '../styles/index.styles'
+import { LogoContainer, ButtonsContainer, ResumeButton, SocialMedia } from '../styles/index.styles'
 
 // Images
 import Avatar from '../images/avatar.png'
@@ -17,17 +17,27 @@ const IndexPage = () => (
       <img id="avatar" src={Avatar} alt="Avatar" />
       <img id="logo" src={Logo} alt="Logo" />
     </LogoContainer>
-    <ButtonContainer>
-      <a href="mailto:andrewandyle@gmail.com" target="_blank" rel="noreferrer">
-        <img src={Email} height={50} alt="Email" />
-      </a>
-      <a href="https://www.linkedin.com/in/andrewandyle/" target="_blank" rel="noreferrer">
-        <img src={LinkedIn} height={50} alt="LinkedIn" />
-      </a>
-      <a href="https://github.com/andrewandyle" target="_blank" rel="noreferrer">
-        <img src={GitHub} height={50} alt="GitHub" />
-      </a>
-    </ButtonContainer>
+    <ButtonsContainer>
+      <ResumeButton
+        rel="noopener noreferrer"
+        href="/AndrewLe-Resume.pdf"
+        target="_blank"
+      >
+        Download Resume
+      </ResumeButton>
+      <SocialMedia>
+        <a href="mailto:andrewandyle@gmail.com" target="_blank" rel="noreferrer">
+          <img src={Email} height={50} alt="Email" />
+        </a>
+        <a href="https://www.linkedin.com/in/andrewandyle/" target="_blank" rel="noreferrer">
+          <img src={LinkedIn} height={50} alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/andrewandyle" target="_blank" rel="noreferrer">
+          <img src={GitHub} height={50} alt="GitHub" />
+        </a>
+      </SocialMedia>
+    </ButtonsContainer>
+    
   </Layout>
 )
 
