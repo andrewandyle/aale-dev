@@ -63,12 +63,17 @@ export const BlogPostHeader = styled.div`
 export const BlogPostContainer = styled(GlassContainer)`
   width: 100%;
   padding: 14px 0;
-  line-height: 1.3rem;
+  line-height: 1.6rem;
   animation: ${fadeIn};
   animation-duration: 400ms;
 
   p, h2, h3, table {
     padding: 0 30px;
+  }
+
+  p {
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
   }
   
   a {
@@ -127,6 +132,8 @@ export const BlogPostContainer = styled(GlassContainer)`
   ul {
     p {
       padding: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
     }
   }
 

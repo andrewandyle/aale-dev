@@ -11,9 +11,9 @@ const BlogPage = ({ data }) => (
       <h4 style={{ marginBlockStart: 0 }}>
         My collection of pages to showcase my personal life! Made using the Contentful Headless CMS.
       </h4>
-      <h2>Hobbies</h2>
+      <h2>Projects</h2>
       <BlogList>
-        {data.allContentfulBlogPost.edges.map((post, index) => post.node.category === 'Hobbies' && (
+        {data.allContentfulBlogPost.edges.map((post, index) => post.node.category === 'Projects' && (
           <Link key={post.node.contentful_id} to={post.node.path}>
             <BlogEntry key={post.node.contentful_id} index={index}>
               <div>
@@ -26,9 +26,9 @@ const BlogPage = ({ data }) => (
         ))}
       </BlogList>
 
-      <h2>Projects</h2>
+      <h2>Hobbies</h2>
       <BlogList>
-        {data.allContentfulBlogPost.edges.map((post, index) => post.node.category === 'Projects' && (
+        {data.allContentfulBlogPost.edges.map((post, index) => post.node.category === 'Hobbies' && (
           <Link key={post.node.contentful_id} to={post.node.path}>
             <BlogEntry key={post.node.contentful_id} index={index}>
               <div>
